@@ -1,5 +1,7 @@
 # Attention-Momentum Crypto Trading Strategy
 
+The author would like to thank Hugo Couture for his contribution to the project. Thanks Hugo ! 
+
 **Note: Consider this as an ongoing project for future purposes. Not intended to be published in its actual state.**
 
 # Abstract

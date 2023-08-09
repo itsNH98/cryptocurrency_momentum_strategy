@@ -1,10 +1,11 @@
+# Authors: Nicolas Harvie & Hugo Couture 
+
 ## 0.1 - Packages -----------------------
 library(gtrendsR)
 library(stringr)
 library(stlplus)
 library(lubridate)
 library(forecast)
-# Note: This code doesn't work at the moment due to changes in the Google API 
 
 #=======================================================#
 # 1 - Data Gathering                                    #
@@ -62,7 +63,7 @@ for(i in 1:length(keywords)) {
       date[[j]] = alt[["interest_over_time"]][["date"]]
       change = 1
     }
-    Sys.sleep(2)
+    Sys.sleep(2.0)
   }
   if(change==1) {
     cryptoALL[[pos]] = crypto
@@ -70,7 +71,7 @@ for(i in 1:length(keywords)) {
     nameALL[pos] = alt$interest_over_time$keyword[1]
     pos = pos + 1
   }
-  Sys.sleep(2)
+  # Sys.sleep(2)
 }
 
 ## 1.3 Knitting Algorithm by Bleher et Dimpfl (2021) ---------

@@ -1,3 +1,5 @@
+# Author: Nicolas Harvie
+
 library(gtrendsR)
 library(tidyr)
 library(dplyr)

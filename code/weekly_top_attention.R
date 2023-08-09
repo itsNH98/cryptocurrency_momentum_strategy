@@ -1,17 +1,18 @@
-# gtrendsR sometimes has problems, this is to test the library
+# Author: Nicolas Harvie
+
 library(gtrendsR)
 library(tidyr)
 library(dplyr)
 library(zoo)
 
-# CRYPTO TEST -------------------------------------------------
+# CRYPTO RETRIEVAL -------------------------------------------------
 keywords_long <- c('Shiba Inu', 'Uniswap', 'Binance')
 keywords_short <- c('XRP', 'MATIC', 'Litecoin')
 all_cryptos <- c(keywords_long, keywords_short)
 
 # Function to get interest data for a keyword set and pivot the results
 get_and_pivot_interest <- function(keyword) {
-  interest_df <- gtrends(keyword, time = "2020-08-07 2023-08-07", 
+  interest_df <- gtrends(keyword, time = "today 12-m", 
                          gprop = c("web", "news", "images", "froogle", "youtube"), 
                          onlyInterest = TRUE)$interest_over_time
   
