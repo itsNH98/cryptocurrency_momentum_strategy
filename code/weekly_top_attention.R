@@ -6,8 +6,8 @@ library(dplyr)
 library(zoo)
 
 # CRYPTO RETRIEVAL -------------------------------------------------
-keywords_long <- c('Shiba Inu', 'Solana', 'Bitcoin -cash -gold')
-keywords_short <- c('XLM', 'XRP', 'Litecoin')
+keywords_long <- c('Solana')
+keywords_short <- c('XRP', 'Litecoin')
 all_cryptos <- c(keywords_long, keywords_short)
 
 # Function to get interest data for a keyword set and pivot the results
