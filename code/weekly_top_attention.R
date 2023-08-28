@@ -6,9 +6,19 @@ library(dplyr)
 library(zoo)
 
 # CRYPTO RETRIEVAL -------------------------------------------------
-keywords_long <- c('Solana')
-keywords_short <- c('XRP', 'Litecoin')
-all_cryptos <- c(keywords_long, keywords_short)
+# Check if command-line arguments are provided
+# Check if command-line arguments are provided
+if (length(commandArgs(TRUE)) < 2) {
+  stop("Please provide a list of tickers and the 'output_sort' flag as command-line arguments.")
+}
+
+# Extract inputs from command-line arguments
+user_input_tickers <- strsplit(commandArgs(TRUE)[1], ",")[[1]]
+output_sort <- as.logical(commandArgs(TRUE)[2])
+
+# Rest of your code using user_input_tickers and output_sort
+all_cryptos <- user_input_tickers
+
 
 # Function to get interest data for a keyword set and pivot the results
 get_and_pivot_interest <- function(keyword) {
